@@ -9,8 +9,8 @@ public class FindFirstLongestString {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String str= "abcdab";
-		System.out.println(LongestSubString(str));
+		String str= "abcdabcdea";
+		System.out.println(LongestSubString(str)+"hello");
 	}	
 	
 	private static String LongestSubString(String str) {
@@ -18,7 +18,7 @@ public class FindFirstLongestString {
 		HashSet<Character> c = new HashSet<>();
 		String longestoverall="";
 		String longest="";
-		
+		HashSet<String> set = new HashSet<>();
 		for(int i=0;i<str.length();i++) {
 			char ch=str.charAt(i);
 			if(c.contains(ch)) {
@@ -32,6 +32,20 @@ public class FindFirstLongestString {
 			}
 		}
 		
+//		for(int i=0;i<str.length();i++) {
+//			char a=str.charAt(i);
+//			if(!longest.contains(a+"")) {
+//				longest=longest.concat(a+"");
+//				System.out.println(longest);
+//			}
+//			else {
+//				set.add(longest);
+//				longest="";
+//				longest=longest.concat(a+"");
+//			}
+//		}
+//		
+//		System.out.println(set);
 		return longestoverall;
 	}
 
